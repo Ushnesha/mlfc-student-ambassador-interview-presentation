@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Interactive presentation for ASU's Mary Lou Fulton College (MLFC) Student Ambassador Interview.">
+  <title>Thriving as a Sun Devil Educator - MLFC Presentation</title>
+
+  <!-- Typography from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="theme-light">
+  <!-- Top Header / Presenter Dashboard -->
+  <header class="app-header">
+    <div class="header-logo">
+      <span class="brand-asu">ASU</span>
+      <span class="brand-mlfc">Mary Lou Fulton College</span>
+    </div>
+    <div class="header-tools">
+      <div class="presentation-timer" id="timer-display" title="Presenter Timer">00:00</div>
+      <button class="tool-btn" id="btn-timer-reset" title="Reset Timer">
+        <svg viewBox="0 0 24 24" width="18" height="18">
+          <path fill="currentColor"
+            d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46A7.93 7.93 0 0 0 20 12c0-4.42-3.58-8-8-8zm-5.3 2.7l-1.46-1.46A7.93 7.93 0 0 0 4 12c0 4.42 3.58 8 8 8v-3l4 4-4 4v-3c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8z" />
+        </svg>
+      </button>
+
+      <button class="tool-btn" id="btn-notes-toggle" title="Toggle Presenter Notes">
+        <svg viewBox="0 0 24 24" width="18" height="18">
+          <path fill="currentColor"
+            d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
+        </svg>
+      </button>
+      <button class="tool-btn" id="btn-fullscreen" title="Toggle Fullscreen">
+        <svg viewBox="0 0 24 24" width="18" height="18">
+          <path fill="currentColor"
+            d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Progress Bar Indicator -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progress-indicator"></div>
+  </div>
+
+  <!-- Main Presentation Container -->
+  <main class="presentation-workspace">
+    <div class="slides-container" id="slides-viewport">
+
+      <!-- SLIDE 1: TITLE SLIDE -->
+      <section class="slide active" id="slide-1">
+        <div class="slide-content title-slide-layout">
+          <div class="hero-overlay"></div>
+          <div class="welcome-badge">STUDENT AMBASSADOR PRESENTATION</div>
+          <h1 class="main-title">Thriving as a <span class="text-gold">Sun Devil</span> Educator</h1>
+          <p class="main-subtitle">Your Journey in the Mary Lou Fulton College</p>
+          <div class="accent-line"></div>
+          <p class="presenter-byline">Prepared by <strong class="text-maroon-light">Ushnesha</strong> • ASU Student
+            Ambassador Interview</p>
+          <button class="cta-btn" id="btn-start-presentation">
+            Start Presentation
+            <svg viewBox="0 0 24 24" width="18" height="18">
+              <path fill="currentColor"
+                d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z" />
+            </svg>
+          </button>
+        </div>
+
+
+      </section>
+
+      <!-- SLIDE 2: PRINCIPLED INNOVATION -->
+      <section class="slide" id="slide-2">
+        <div class="slide-content standard-layout">
+          <span class="slide-topic">Core Philosophy</span>
+          <h2 class="slide-title">Principled Innovation</h2>
+          <p class="slide-intro">The guiding core value of Mary Lou Fulton College. It prompts us to ask: <em
+              class="quote-text">"Should we do this?"</em> rather than just <em class="quote-text">"Can we do
+              this?"</em></p>
+
+          <div class="pillars-grid">
+            <div class="pillar-card" data-card="1">
+              <div class="pillar-card-inner">
+                <div class="pillar-card-front">
+                  <div class="pillar-icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32">
+                      <path fill="currentColor"
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z" />
+                    </svg>
+                  </div>
+                  <h3 class="pillar-title">Advance Equity</h3>
+                  <p class="pillar-desc">Designing learning environments where every student, regardless of background,
+                    gets what they need to succeed.</p>
+                  <span class="click-to-flip">Click to flip ↺</span>
+                </div>
+                <div class="pillar-card-back">
+                  <h3 class="pillar-title">Ambassador Pro-Tip</h3>
+                  <p class="pillar-desc">Universal Design for Learning (UDL) is key here. You will learn to construct
+                    lessons with multiple entry points and flexible pathways so no student is left behind.</p>
+                  <span class="click-to-flip">Go back ↺</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pillar-card" data-card="2">
+              <div class="pillar-card-inner">
+                <div class="pillar-card-front">
+                  <div class="pillar-icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32">
+                      <path fill="currentColor"
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+                    </svg>
+                  </div>
+                  <h3 class="pillar-title">Support the Economy</h3>
+                  <p class="pillar-desc">Equipping learners with adaptivity, critical thinking, and skills for a
+                    dynamically evolving job market.</p>
+                  <span class="click-to-flip">Click to flip ↺</span>
+                </div>
+                <div class="pillar-card-back">
+                  <h3 class="pillar-title">Ambassador Pro-Tip</h3>
+                  <p class="pillar-desc">MLFTC integrates technology, collaboration tools, and real-world
+                    problem-solving into your classes to prepare you for future, tech-enabled school environments.</p>
+                  <span class="click-to-flip">Go back ↺</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pillar-card" data-card="3">
+              <div class="pillar-card-inner">
+                <div class="pillar-card-front">
+                  <div class="pillar-icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32">
+                      <path fill="currentColor"
+                        d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+                    </svg>
+                  </div>
+                  <h3 class="pillar-title">Strengthen Democracy</h3>
+                  <p class="pillar-desc">Cultivating active citizens who can participate constructively, civilly, and
+                    empathetically in society.</p>
+                  <span class="click-to-flip">Click to flip ↺</span>
+                </div>
+                <div class="pillar-card-back">
+                  <h3 class="pillar-title">Ambassador Pro-Tip</h3>
+                  <p class="pillar-desc">You'll learn how to foster civil dialogue, respect, and empathy in your future
+                    classrooms, preparing students to engage constructively in their local communities.</p>
+                  <span class="click-to-flip">Go back ↺</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </section>
+
+      <!-- SLIDE 3: NEXT EDUCATION WORKFORCE -->
+      <section class="slide" id="slide-3">
+        <div class="slide-content standard-layout">
+          <span class="slide-topic">Reimagining Education</span>
+          <h2 class="slide-title">The Next Education Workforce</h2>
+          <p class="slide-intro">ASU is redesigning the traditional "one teacher, one classroom" model to address
+            teacher burnout and improve student learning.</p>
+
+          <div class="comparison-container">
+            <div class="comparison-card traditional">
+              <div class="card-badge badge-traditional">Traditional Model</div>
+              <h3 class="comparison-heading">The Isolated Educator</h3>
+              <ul class="comparison-list">
+                <li>Solo teacher managing 25-30 students</li>
+                <li>Expected to be an expert in all areas</li>
+                <li>High isolation and elevated burnout rates</li>
+                <li>One-size-fits-all lesson plans</li>
+              </ul>
+            </div>
+
+            <div class="vs-divider">VS</div>
+
+            <div class="comparison-card asu-model">
+              <div class="card-badge badge-asu">Next Education Workforce™</div>
+              <h3 class="comparison-heading">Team-Based Staffing</h3>
+              <ul class="comparison-list">
+                <li>Collaborative teams of educators</li>
+                <li>Distributed expertise tailored to needs</li>
+                <li>Sustainable roles with peer support</li>
+                <li>More personalized student attention</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+      </section>
+
+      <!-- SLIDE 4: SUCCESS TOOLBOX -->
+      <section class="slide" id="slide-4">
+        <div class="slide-content standard-layout">
+          <span class="slide-topic">Student Resources</span>
+          <h2 class="slide-title">Your Student Success Toolbox</h2>
+          <p class="slide-intro">MLFC provides personalized support structures to help you navigate academic, personal,
+            and professional hurdles.</p>
+
+          <div class="resources-grid">
+            <div class="resource-item" data-resource="advisors">
+              <div class="resource-header">
+                <div class="resource-icon icon-maroon">
+                  <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="currentColor"
+                      d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5.89 12.55L12 15.88l6.11-3.33c.09-.05.18-.09.28-.12L21 11l-9 4.91L3 11l2.61 1.43c.1.03.19.07.28.12zm-.11 3.52c0 .35.15.68.42.92L12 21.5l5.8-4.51c.27-.24.42-.57.42-.92v-1.74l-6.22 4.84L5.78 14.3v1.77z" />
+                  </svg>
+                </div>
+                <h3 class="resource-title">Academic & Career Advisors</h3>
+              </div>
+              <p class="resource-desc">Your strategic planners. Reach out to map your degree paths, choose
+                certifications, or prepare for graduation and career entry.</p>
+              <!-- <span class="click-details-prompt">Click to reveal details</span> -->
+            </div>
+
+            <div class="resource-item" data-resource="coaches">
+              <div class="resource-header">
+                <div class="resource-icon icon-gold">
+                  <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="currentColor"
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+                  </svg>
+                </div>
+                <h3 class="resource-title">MLFC Success Coaches</h3>
+              </div>
+              <p class="resource-desc">Your wellness partners. Meet with them to build time-management systems, study
+                strategies, and stress-reduction routines.</p>
+              <!-- <span class="click-details-prompt">Click to reveal details</span> -->
+            </div>
+
+            <div class="resource-item" data-resource="trio">
+              <div class="resource-header">
+                <div class="resource-icon icon-dark">
+                  <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="currentColor"
+                      d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                  </svg>
+                </div>
+                <h3 class="resource-title">TRIO Support Services</h3>
+              </div>
+              <p class="resource-desc">Your community network. Specialized mentoring, financial literacy education, and
+                guidance for first-generation and low-income scholars.</p>
+              <!-- <span class="click-details-prompt">Click to reveal details</span> -->
+            </div>
+          </div>
+
+          <!-- <div class="resource-details-panel" id="resource-details-panel">
+            <div class="panel-placeholder" id="panel-placeholder">
+              <svg viewBox="0 0 24 24" width="24" height="24" class="info-pulse">
+                <path fill="currentColor"
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+              </svg>
+              <span>Click any resource card above to see contact details and a Student Ambassador Pro-Tip.</span>
+            </div>
+            <div class="panel-content hidden" id="panel-content">
+              <h4 class="panel-detail-title" id="panel-detail-title"></h4>
+              <p class="panel-detail-tip" id="panel-detail-tip"></p>
+              <div class="panel-detail-contact" id="panel-detail-contact"></div>
+            </div>
+          </div>
+        </div> -->
+
+
+      </section>
+
+      <!-- SLIDE 5: STUDENT LIFE -->
+      <section class="slide" id="slide-student-life">
+        <div class="slide-content standard-layout">
+          <span class="slide-topic">Campus Life</span>
+          <h2 class="slide-title">Engaging Beyond the Classroom</h2>
+          <p class="slide-intro">Mary Lou Fulton Teachers College supports the whole you—academically, socially, and
+            residentially.</p>
+
+          <div class="student-life-grid">
+            <div class="life-card">
+              <div class="life-card-header">
+                <div class="life-icon">🏠</div>
+                <h3 class="life-card-title">Residential College</h3>
+              </div>
+              <p class="life-card-desc">Live, learn, and experience ASU alongside fellow future educators. Enjoy a
+                close-knit, supportive community steps away from academic halls.</p>
+              <ul class="life-bullet-list">
+                <li>All-inclusive living options</li>
+                <li>Collaborative peer-study environments</li>
+              </ul>
+            </div>
+
+            <div class="life-card">
+              <div class="life-card-header">
+                <div class="life-icon">🤝</div>
+                <h3 class="life-card-title">Teachers College Council</h3>
+              </div>
+              <p class="life-card-desc">The premier student leadership body. Represent the student voice to college
+                leadership, build community, and lead student-run initiatives.</p>
+              <ul class="life-bullet-list">
+                <li>Direct liaison with MLFTC leadership</li>
+                <li>Professional networking mixers</li>
+              </ul>
+            </div>
+
+            <div class="life-card">
+              <div class="life-card-header">
+                <div class="life-icon">🔍</div>
+                <h3 class="life-card-title">Student Clubs & Sync</h3>
+              </div>
+              <p class="life-card-desc">Find your community, discover new interests, and build your professional
+                network. Use Sun Devil Sync to search hundreds of ASU student organizations.</p>
+              <ul class="life-bullet-list">
+                <li>500+ active student clubs</li>
+                <li>Changemaker Central volunteerism</li>
+              </ul>
+            </div>
+
+            <div class="life-card">
+              <div class="life-card-header">
+                <div class="life-icon">❤️</div>
+                <h3 class="life-card-title">Coordinated SOS Care</h3>
+              </div>
+              <p class="life-card-desc">Need support? Submit a Support Our Students (SOS) care form. College care
+                strategists quickly step in to resolve personal, financial, or academic concerns.</p>
+              <ul class="life-bullet-list">
+                <li>SOS care strategist interventions</li>
+                <li>Holistic mental & academic support</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 6: DAY ONE CHECKLIST -->
+      <section class="slide" id="slide-5">
+        <div class="slide-content standard-layout">
+          <span class="slide-topic">Onboarding Tasks</span>
+          <h2 class="slide-title">Day One Checklist</h2>
+          <p class="slide-intro">Four steps to complete immediately for a seamless transition into ASU.</p>
+
+          <!-- Onboarding Step Remote -->
+          <div class="step-remote-container">
+            <button class="step-btn active" data-step="1">
+              <span class="step-btn-num">1</span>
+              <span class="step-btn-label">My ASU</span>
+            </button>
+            <button class="step-btn" data-step="2">
+              <span class="step-btn-num">2</span>
+              <span class="step-btn-label">Orientation</span>
+            </button>
+            <button class="step-btn" data-step="3">
+              <span class="step-btn-num">3</span>
+              <span class="step-btn-label">ASU Email</span>
+            </button>
+            <button class="step-btn" data-step="4">
+              <span class="step-btn-num">4</span>
+              <span class="step-btn-label">Devil2Devil</span>
+            </button>
+          </div>
+
+          <!-- Step Card Viewer -->
+          <div class="step-display-card" id="step-display-card">
+            <div class="step-card-header">
+              <span class="step-badge" id="step-card-badge">Step 1 of 4: Admin Portal</span>
+              <h3 class="step-card-title" id="step-card-title">Monitor "My ASU" Tasks</h3>
+            </div>
+            <div class="step-card-body">
+              <p class="step-card-desc" id="step-card-desc">Complete Priority Tasks on your portal to prevent
+                registration holds or financial aid delays.</p>
+
+              <div class="step-bullet-container" id="step-bullet-container">
+                <!-- Dynamically loaded via app.js -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </section>
+
+      <!-- SLIDE 6: CASE STUDY -->
+      <section class="slide" id="slide-6">
+        <div class="slide-content standard-layout">
+          <span class="slide-topic">Case Study Analysis</span>
+          <h2 class="slide-title">Principled Innovation in Action</h2>
+          <p class="slide-intro">How would you handle a real-world residency scenario? Select a core pillar below to
+            examine the approach.</p>
+
+          <div class="case-study-grid">
+            <!-- Scenario Card -->
+            <div class="case-scenario-card">
+              <div class="scenario-badge">The Challenge</div>
+              <p class="scenario-text">During your student teaching residency, you notice that a student is falling
+                behind on digital reading assignments because they lack stable internet access at home.</p>
+            </div>
+
+            <!-- Analysis Tabs & Display -->
+            <div class="case-analysis-panel">
+              <div class="analysis-tabs">
+                <button class="analysis-tab-btn active" data-pillar="equity">Advance Equity</button>
+                <button class="analysis-tab-btn" data-pillar="inquiry">Inquire Critically</button>
+                <button class="analysis-tab-btn" data-pillar="democracy">Strengthen Democracy</button>
+                <button class="analysis-tab-btn" data-pillar="economy">Support the Economy</button>
+              </div>
+              <div class="analysis-display-box">
+                <h4 class="analysis-display-title" id="analysis-pillar-title">Advance Equity</h4>
+                <p class="analysis-display-desc" id="analysis-pillar-desc">Provide alternative offline-friendly modules
+                  and construct flexible pacing parameters so background limitations don't define academic outcomes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </section>
+
+      <!-- SLIDE 7: CONCLUSION -->
+      <section class="slide" id="slide-7">
+        <div class="slide-content conclusion-layout">
+          <div class="hero-overlay"></div>
+          <span class="slide-topic">Final Thoughts</span>
+          <h2 class="conclusion-title">Welcome to the Future of Education</h2>
+          <p class="conclusion-quote">"We are not just teaching educators; we are empowering innovators who will design
+            the future."</p>
+
+          <!-- <div class="contact-box-container">
+            <div class="contact-box">
+              <h3 class="contact-box-title">Important Coordinates</h3>
+              <div class="contact-detail">
+                <span class="contact-icon">📧</span>
+                <span class="contact-info-text"><a href="mailto:educationadvising@asu.edu"
+                    class="contact-link">educationadvising@asu.edu</a></span>
+              </div>
+              <div class="contact-detail">
+                <span class="contact-icon">📞</span>
+                <span class="contact-info-text">480-965-5555</span>
+              </div>
+            </div>
+          </div> -->
+
+          <p class="thank-you-msg">Thank you! Let's build a brighter future, together.</p>
+        </div>
+
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Presenter Drawer / Sidebar for Speaker Notes -->
+  <aside class="presenter-drawer hidden" id="presenter-drawer">
+    <div class="drawer-header">
+      <h2>Presenter Teleprompter</h2>
+      <button class="close-btn" id="btn-close-notes" title="Close Panel">×</button>
+    </div>
+    <div class="drawer-content" id="notes-content-area">
+      <!-- Dynamic notes loaded here by app.js -->
+    </div>
+  </aside>
+
+  <!-- Navigation Controls -->
+  <footer class="controls-bar">
+    <button class="nav-btn" id="btn-prev" disabled title="Previous Slide (Left Arrow)">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <path fill="currentColor" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+      </svg>
+    </button>
+
+    <div class="slide-indicator" id="slide-num-indicator">
+      Slide <span id="current-slide-num">1</span> of <span id="total-slide-num">7</span>
+    </div>
+
+    <button class="nav-btn" id="btn-next" title="Next Slide (Right Arrow or Space)">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <path fill="currentColor" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+      </svg>
+    </button>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
